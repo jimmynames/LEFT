@@ -1,0 +1,131 @@
+body {
+margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+} 
+
+#cube {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 13%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+}
+
+
+#cube figure {
+    display: block;
+    position: absolute;
+    width: 66.6vw;
+    height: 66.6vh;
+    border: 2px solid black;
+    line-height: 196px;
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
+#cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+#cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+#cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+#cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+#cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+
+
+/*
+.ui {
+
+    width: 300px;
+    height: 300px;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+
+#cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+#cube figure {
+  margin: 0;
+  width: 196px;
+  height: 196px;
+  display: block;
+  position: absolute;
+  border: 2px solid black;
+}
+
+
+
+
+.sides {
+    height: 100%;
+}
+
+.ui.cube.shape .side {
+    height: 100%;
+} */
+
+.left {
+    position: fixed;
+    border: 5px solid yellow;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    z-index: 3;
+}
+
+.right {
+    position: fixed;
+    border: 5px solid red;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    z-index: 3;
+}
+
+.top {
+    position: fixed;
+    border: 5px solid green;
+    top: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    z-index: 2;
+}
+
+.bottom {
+    position: fixed;
+    border: 5px solid blue;
+    bottom: 0;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    z-index: 2;
+}
