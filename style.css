@@ -1,7 +1,7 @@
 body {
-margin: 0;
-    height: 100vh;
-    width: 100vw;
+    margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .wrapper {
@@ -9,12 +9,14 @@ margin: 0;
     justify-content: center;
     flex-wrap: nowrap;
     align-content: center;
+    perspective: 2000px;
+    perspective-origin: 50% 50%;
 } 
 
 #cube {
     width: 100%;
     height: 100%;
-    top: 0;
+    top: -50;
     left: 13%;
     position: absolute;
     -webkit-transform-style: preserve-3d;
@@ -31,8 +33,8 @@ margin: 0;
 #cube figure {
     display: block;
     position: absolute;
-    width: 66.6vw;
-    height: 66.6vh;
+    width: 500px;
+    height: 500px;
     border: 2px solid black;
     line-height: 196px;
     font-size: 120px;
@@ -41,14 +43,55 @@ margin: 0;
     text-align: center;
 }
 
-#cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
-#cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
-#cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
-#cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
-#cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
-#cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+
+.spinning {
+    -webkit-animation: spinCubeWebkit 8s infinite ease-in-out;
+    -moz-animation: spinCubeMoz 8s infinite ease-in-out;
+    -o-animation: spinCubeO 8s infinite ease-in-out;
+    animation: spinCube 8s infinite ease-in-out;
+}
 
 
+#cube .front  { transform: rotateY(   0deg ) translateZ( 250px ); }
+#cube .back   { transform: rotateX( 180deg ) translateZ( 250px ); }
+#cube .right  { transform: rotateY(  90deg ) translateZ( -364px ); }
+#cube .left   { transform: rotateY( -90deg ) translateZ( 250px ); }
+#cube .top    { transform: rotateX(  90deg ) translateZ( 250px ); }
+#cube .bottom { transform: rotateX( -90deg ) translateZ( 994px ); }
+
+#cube .front {
+    background-color: antiquewhite;
+}
+
+#cube .back {
+    background-color: aquamarine;
+}
+
+#cube .right {
+    background-color: lightsteelblue;
+}
+
+#cube .left {
+    background-color: lightsalmon;
+}
+
+#cube .top {
+    background-color: lightgreen;
+}
+
+#cube .bottom {
+    background-color: lightpink;
+}
+
+
+@keyframes spinCube {   
+0% {
+    transform: translateZ( -500px ) rotateX( 0deg ) rotateY( 0deg );
+}
+100% {
+    transform: translateZ( -500px ) rotateX( 360deg ) rotateY( 360deg );
+}
+}
 /*
 .ui {
 
