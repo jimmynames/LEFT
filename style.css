@@ -1,47 +1,32 @@
 body {
+    background-color: black;
     margin: 0;
     height: 100%;
     width: 100%;
     cursor: crosshair;
+    background: url(back.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-content: center;
-    perspective: 2000px;
-    perspective-origin: 50% 50%;
-} 
+body::before {
+    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,#000,#151515);
+		opacity: .9; 
+  }
 
-#cube {
-    width: 100%;
-    height: 100%;
-    top: -50;
-    left: 13%;
+
+.container {
     position: absolute;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform 1s;
-    -moz-transition: -moz-transform 1s;
-    -o-transition: -o-transform 1s;
-    transition: transform 1s;
-}
-
-
-#cube figure {
-    display: block;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border: 2px solid black;
-    line-height: 196px;
-    font-size: 120px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
+    top: 150;
+    left: 100;
 }
 
 
@@ -52,98 +37,6 @@ body {
     animation: spinCube 8s infinite ease-in-out;
 }
 
-
-#cube .front  { transform: rotateY(   0deg ) translateZ( 250px ); }
-#cube .back   { transform: rotateX( 180deg ) translateZ( 250px ); }
-#cube .right  { transform: rotateY(  90deg ) translateZ( -410px ); }
-#cube .left   { transform: rotateY( -90deg ) translateZ( 250px ); }
-#cube .top    { transform: rotateX(  90deg ) translateZ( 250px ); }
-#cube .bottom { transform: rotateX( -90deg ) translateZ( 994px ); }
-
-#cube .front {
-    /*background-color: antiquewhite*/
-}
-
-#cube .back {
-    background-color: aquamarine;
-}
-
-#cube .right {
-    background-color: lightsteelblue;
-}
-
-#cube .left {
-    background-color: lightsalmon;
-}
-
-#cube .top {
-    background-color: lightgreen;
-}
-
-#cube .bottom {
-    background-color: lightpink;
-}
-
-
-@keyframes spinCube {   
-0% {
-    transform: translateZ( -500px ) rotateX( 0deg ) rotateY( 0deg );
-}
-100% {
-    transform: translateZ( -500px ) rotateX( 360deg ) rotateY( 360deg );
-}
-}
-/*
-.ui {
-
-    width: 300px;
-    height: 300px;
-}
-
-.container {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  perspective: 1000px;
-}
-
-#cube {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-}
-
-#cube figure {
-  margin: 0;
-  width: 196px;
-  height: 196px;
-  display: block;
-  position: absolute;
-  border: 2px solid black;
-}
-
-
-
-
-.sides {
-    height: 100%;
-}
-
-.ui.cube.shape .side {
-    height: 100%;
-} */
-
-.left {
-    position: fixed;
-    border: 5px solid yellow;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 25%;
-    z-index: 3;
-    
-}
 
 .right:hover {
     cursor: e-resize;
@@ -156,6 +49,16 @@ body {
 }
 .left:hover {
     cursor: w-resize;
+}
+.left {
+    position: fixed;
+    border: 5px solid yellow;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    z-index: 3;
+    
 }
 
 .right {
@@ -186,13 +89,4 @@ body {
     height: 25%;
     width: 100%;
     z-index: 2;
-}
-
-.video-background { /* class name used in javascript too */
-    width: 100%; /* width needs to be set to 100% */
-    height: 100%; /* height needs to be set to 100% */
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 99;
 }
