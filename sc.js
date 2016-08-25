@@ -12,3 +12,5 @@ SC.oEmbed(track_url, { auto_play: true }, {theme_color: "#421C52"} ).then(functi
 SC.oEmbed('https://soundcloud.com/l_e_f_t/trust', {
     element: document.getElementById('widget')
   });
+
+
