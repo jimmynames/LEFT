@@ -5,7 +5,7 @@ SC.initialize({
 });
 
 var track_url = 'https://soundcloud.com/l_e_f_t/trust';
-SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+SC.oEmbed(track_url, { auto_play: true }, {theme_color: "#421C52"} ).then(function(oEmbed) {
   console.log('oEmbed response: ', oEmbed);
 });
 
