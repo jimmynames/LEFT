@@ -1,25 +1,37 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: black;
     margin: 0;
+}
+
+
+
+.wrapper {
     height: 100%;
     width: 100%;
     cursor: crosshair;
-    background: url(back.jpg) no-repeat center center fixed; 
+    background: url(backPS.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+ 
 }
 
-body::before {
+.wrapper::before {
     content: '';
 		position: absolute;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: linear-gradient(to bottom right,#000,#151515);
-		opacity: .9; 
+		background-image: linear-gradient(to bottom right,#151515,#000);
+		opacity: .3; 
+       
   }
 
 
@@ -27,8 +39,27 @@ body::before {
     position: absolute;
     top: 150;
     left: 100;
+    float: left;
 }
 
+
+video {
+  width: 100%    !important;
+  height: auto   !important;
+    z-index: 99;
+}
+
+.content {
+    float: right;
+    color: #fff;
+    z-index: 99;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 4em;
+    opacity: 1;
+}
 
 .spinning {
     -webkit-animation: spinCubeWebkit 8s infinite ease-in-out;
@@ -37,56 +68,19 @@ body::before {
     animation: spinCube 8s infinite ease-in-out;
 }
 
-
-.right:hover {
-    cursor: e-resize;
-}
-.top:hover {
-    cursor: n-resize;
-}
-.bottom:hover {
-    cursor: s-resize;
-}
-.left:hover {
-    cursor: w-resize;
-}
-.left {
-    position: fixed;
-    border: 5px solid yellow;
-    top: 0;
+#widget iframe {
+    height: 100px;
+    position: absolute;
     left: 0;
-    height: 100%;
-    width: 25%;
-    z-index: 3;
-    
-}
-
-.right {
-    position: fixed;
-    border: 5px solid red;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 25%;
-    z-index: 3;
-}
-
-.top {
-    position: fixed;
-    border: 5px solid green;
-    top: 0;
-    left: 0;
-    height: 25%;
-    width: 100%;
-    z-index: 2;
-}
-
-.bottom {
-    position: fixed;
-    border: 5px solid blue;
     bottom: 0;
-    left: 0;
-    height: 25%;
     width: 100%;
-    z-index: 2;
+    height: 100px;
+    overflow: hidden;
+    opacity: .8;
 }
+
+.sc-artwork-list,
+.sc-info,
+.sc-trackslist,
+.sc-info-toggle,
+.sc-scrubber { display: none !important; }
