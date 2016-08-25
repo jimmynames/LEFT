@@ -108,7 +108,23 @@ video {
     width: 115px;
 }
 
+.cube div .side {
+    height: 100%;
+    width: 100%;
+}
 
+.cube > div {
+    background-color: black;
+}
+
+@keyframes spinCube {   
+ 0% {
+     transform: translateZ( -500px ) rotateX( 0deg ) rotateY( 0deg );
+ }
+ 100% {
+     transform: translateZ( -500px ) rotateX( 360deg ) rotateY( 360deg );
+ }
+ }
 
 .spinning {
     -webkit-animation: spinCubeWebkit 8s infinite ease-in-out;
