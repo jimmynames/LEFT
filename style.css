@@ -68,6 +68,7 @@ video {
     font-size: 5em;
     opacity: 1;
     letter-spacing: 10px;
+    text-align: left;
 }
 
 .content ul {
