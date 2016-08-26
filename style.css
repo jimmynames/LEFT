@@ -43,7 +43,7 @@ body {
 
 .container {
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 10%;
     float: left;
 }
@@ -56,7 +56,7 @@ video {
 }
 
 .content {
-    margin-top: 4em;
+    margin-top: 170px;
     margin-right: 2em;
     float: right;
     color: #fff;
@@ -68,6 +68,7 @@ video {
     font-size: 5em;
     opacity: 1;
     letter-spacing: 10px;
+    text-align: left;
 }
 
 .content ul {
@@ -108,6 +109,10 @@ video {
     width: 115px;
 }
 
+.cube:hover {
+    cursor: move;
+}
+
 .cube div .side {
     height: 100%;
     width: 100%;
@@ -119,18 +124,18 @@ video {
 
 @keyframes spinCube {   
  0% {
-     transform: translateZ( -500px ) rotateX( 0deg ) rotateY( 0deg );
+     transform: translateZ( 0px ) rotateX( 0deg ) rotateY( 0deg );
  }
  100% {
-     transform: translateZ( -500px ) rotateX( 360deg ) rotateY( 360deg );
+     transform: translateZ( 0px ) rotateX( 360deg ) rotateY( 360deg );
  }
  }
 
 .spinning {
-    -webkit-animation: spinCubeWebkit 8s infinite ease-in-out;
-    -moz-animation: spinCubeMoz 8s infinite ease-in-out;
-    -o-animation: spinCubeO 8s infinite ease-in-out;
-    animation: spinCube 8s infinite ease-in-out;
+    -webkit-animation: spinCubeWebkit 18s infinite ease-in-out;
+    -moz-animation: spinCubeMoz 18s infinite ease-in-out;
+    -o-animation: spinCubeO 18s infinite ease-in-out;
+    animation: spinCube 18s infinite ease-in-out;
 }
 
 footer {
