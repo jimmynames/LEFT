@@ -452,9 +452,21 @@ footer #widget {
 
 }
 
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 736px) {
     
+    .content {
+        width: 50%;
+        margin: 0 auto;
+        float: none;
+        
+    }
     
     .content h1 {
         font-size: 
+    }
+    
+    .container {
+        top: 40%;
+        left: 25%;
+    }
 }
