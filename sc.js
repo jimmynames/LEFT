@@ -13,9 +13,8 @@ SC.oEmbed(track_url,
         console.log('oEmbed response: ', oEmbed);
 }); */
 
-SC.oEmbed('https://soundcloud.com/l_e_f_t/trust&amp;color=421C52&amp;auto_play=true', {
+SC.oEmbed('https://soundcloud.com/l_e_f_t/trust&amp;color=421C52&amp;auto_play=true&amp;show_artwork=false', {
     
     element: document.getElementById('widget')
   });
-
 

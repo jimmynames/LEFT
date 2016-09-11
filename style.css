@@ -337,7 +337,7 @@ footer #widget {
     }   
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 1020px) {
       .cube {
         height: 300px;
         width: 300px;
@@ -349,49 +349,57 @@ footer #widget {
     }
     
     .cube > div:first-child  {
-    -webkit-transform: rotateX(90deg) translateZ(150px);
-    -moz-transform: rotateX(90deg) translateZ(150px);
-    transform: rotateX(90deg) translateZ(150px);
+    -webkit-transform: rotateX(90deg) translateZ(160px);
+    -moz-transform: rotateX(90deg) translateZ(160px);
+    transform: rotateX(90deg) translateZ(160px);
 }
 
 .cube > div:nth-child(2) {
-    -webkit-transform: translateZ(150px);
-    -moz-transform: translateZ(150px);
-    transform: translateZ(150px);
+    -webkit-transform: translateZ(160px);
+    -moz-transform: translateZ(160px);
+    transform: translateZ(160px);
 }
 
 .cube > div:nth-child(3) {
-    -webkit-transform: rotateY(90deg) translateZ(150px);
-    -moz-transform: rotateY(90deg) translateZ(150px);
-    transform: rotateY(90deg) translateZ(150px);
+    -webkit-transform: rotateY(90deg) translateZ(160px);
+    -moz-transform: rotateY(90deg) translateZ(160px);
+    transform: rotateY(90deg) translateZ(160px);
     text-align: center;
 }
 
 .cube > div:nth-child(4) {
-    -webkit-transform: rotateY(180deg) translateZ(150px);
-    -moz-transform: rotateY(180deg) translateZ(150px);
-    transform: rotateY(180deg) translateZ(150px);
+    -webkit-transform: rotateY(180deg) translateZ(160px);
+    -moz-transform: rotateY(180deg) translateZ(160px);
+    transform: rotateY(180deg) translateZ(160px);
 }
 
 .cube > div:nth-child(5) {
-    -webkit-transform: rotateY(-90deg) translateZ(150px);
-    -moz-transform: rotateY(-90deg) translateZ(150px);
-    transform: rotateY(-90deg) translateZ(150px);
+    -webkit-transform: rotateY(-90deg) translateZ(160px);
+    -moz-transform: rotateY(-90deg) translateZ(160px);
+    transform: rotateY(-90deg) translateZ(160px);
 }
 
 
 .cube > div:nth-child(6) {
-    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(150px);
-    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(150px);
-    transform: rotateX(-90deg) rotate(180deg) translateZ(150px);
+    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(160px);
+    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(160px);
+    transform: rotateX(-90deg) rotate(180deg) translateZ(160px);
 }
 
 
 }
 
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 890px) {
     
+    .container {
+        top: 35%;
+        left: 10%;
+    }
+    
+    .content {
+        margin-top: 66.6px;
+    }
     
     .cube {
         height: 200px;
@@ -404,51 +412,48 @@ footer #widget {
     }
     
     .cube > div:first-child  {
-    -webkit-transform: rotateX(90deg) translateZ(100px);
-    -moz-transform: rotateX(90deg) translateZ(100px);
-    transform: rotateX(90deg) translateZ(100px);
+    -webkit-transform: rotateX(90deg) translateZ(110px);
+    -moz-transform: rotateX(90deg) translateZ(110px);
+    transform: rotateX(90deg) translateZ(110px);
 }
 
 .cube > div:nth-child(2) {
-    -webkit-transform: translateZ(100px);
-    -moz-transform: translateZ(100px);
-    transform: translateZ(100px);
+    -webkit-transform: translateZ(110px);
+    -moz-transform: translateZ(110px);
+    transform: translateZ(110px);
 }
 
 .cube > div:nth-child(3) {
-    -webkit-transform: rotateY(90deg) translateZ(100px);
-    -moz-transform: rotateY(90deg) translateZ(100px);
-    transform: rotateY(90deg) translateZ(100px);
+    -webkit-transform: rotateY(90deg) translateZ(110px);
+    -moz-transform: rotateY(90deg) translateZ(110px);
+    transform: rotateY(90deg) translateZ(110px);
     text-align: center;
 }
 
 .cube > div:nth-child(4) {
-    -webkit-transform: rotateY(180deg) translateZ(100px);
-    -moz-transform: rotateY(180deg) translateZ(100px);
-    transform: rotateY(180deg) translateZ(100px);
+    -webkit-transform: rotateY(180deg) translateZ(110px);
+    -moz-transform: rotateY(180deg) translateZ(110px);
+    transform: rotateY(180deg) translateZ(110px);
 }
 
 .cube > div:nth-child(5) {
-    -webkit-transform: rotateY(-90deg) translateZ(100px);
-    -moz-transform: rotateY(-90deg) translateZ(100px);
-    transform: rotateY(-90deg) translateZ(100px);
+    -webkit-transform: rotateY(-90deg) translateZ(110px);
+    -moz-transform: rotateY(-90deg) translateZ(110px);
+    transform: rotateY(-90deg) translateZ(110px);
 }
 
 
 .cube > div:nth-child(6) {
-    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
-    transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(110px);
+    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(110px);
+    transform: rotateX(-90deg) rotate(180deg) translateZ(110px);
 }
 
 
 }
 
 @media only screen and (max-width: 667px) {
-    .container {
-        top: 35%;
-        left: 30%;
-    }
+    
     
     .content h1 {
         font-size: 
