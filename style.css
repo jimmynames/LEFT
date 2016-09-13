@@ -19,7 +19,7 @@ body {
     height: 100%;
     width: 100%;
     cursor: crosshair;
-    background: url(backPS.jpg) no-repeat center center fixed; 
+    background: url(backPS.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,9 +35,9 @@ body {
 		bottom: 0;
 		left: 0;
 		background-image: linear-gradient(to bottom right,#151515,#000);
-		opacity: .3; 
+		opacity: .3;
         z-index: -1;
-       
+
   }
 
 
@@ -50,14 +50,14 @@ body {
 
 
 video {
-  width: 100%    !important;
-  height: auto   !important;
+    width: 100%    !important;
+    height: auto   !important;
     z-index: 99;
 }
 
 .content {
     margin-top: 170px;
-    margin-right: 2em;
+    margin-right: 180px;
     float: right;
     color: #fff;
     z-index: 99;
@@ -76,7 +76,7 @@ video {
   color: white;
   font-size: 100px;
   position: relative;
-  width: 400px;
+  width: 200px;
   margin: 0 auto;
 }
 
@@ -241,21 +241,21 @@ video {
     list-style: none;
     text-align: left;
     padding-left: 5px;
-    
+
 }
 
 .content ul li {
     margin-top: 2em;
     letter-spacing: 2px;
     font-weight: lighter;
-    
+
 }
 
 .content ul li a {
     display: inline-block;
     text-decoration: none;
     color: white;
-    border-bottom: 3px solid transparent;    
+    border-bottom: 3px solid transparent;
     width: 0px;
     transition: 1s ease;
     white-space: nowrap;
@@ -288,7 +288,7 @@ video {
     background-color: black;
 }
 
-@keyframes spinCube {   
+@keyframes spinCube {
  0% {
      transform: translateZ( 0px ) rotateX( 0deg ) rotateY( 0deg );
  }
@@ -305,7 +305,6 @@ video {
 }
 
 footer {
-    min-height: 100%;
     margin: 0;
 }
 
@@ -314,7 +313,7 @@ footer #widget {
 }
 
 #widget iframe {
-    
+
     position: absolute;
     left: 0;
     bottom: 0;
@@ -331,10 +330,10 @@ footer #widget {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 980px) {
-    
+
     .content {
-        
-    }   
+
+    }
 }
 
 @media only screen and (max-width: 1020px) {
@@ -342,12 +341,12 @@ footer #widget {
         height: 300px;
         width: 300px;
     }
-    
+
     .cube > div {
         height: 300px;
         width: 300px;
     }
-    
+
     .cube > div:first-child  {
     -webkit-transform: rotateX(90deg) translateZ(160px);
     -moz-transform: rotateX(90deg) translateZ(160px);
@@ -391,26 +390,26 @@ footer #widget {
 
 
 @media only screen and (max-width: 890px) {
-    
+
     .container {
         top: 35%;
         left: 10%;
     }
-    
+
     .content {
-        margin-top: 66.6px;
+        /*margin-top: 66.6px;*/
     }
-    
+
     .cube {
         height: 200px;
         width: 200px;
     }
-    
+
     .cube > div {
         height: 200px;
         width: 200px;
     }
-    
+
     .cube > div:first-child  {
     -webkit-transform: rotateX(90deg) translateZ(110px);
     -moz-transform: rotateX(90deg) translateZ(110px);
@@ -452,21 +451,136 @@ footer #widget {
 
 }
 
-@media only screen and (max-width: 736px) {
-    
+/* NEED TO ISOLATE TO IPADS ONLY GUHHHHHH */
+/*
+@media only screen and (max-width: 768px) {
+
+  .content {
+      width: 50%;
+      margin: 0 auto;
+      float: none;
+      padding-top: 1em;
+  }
+/*
+  .content h1 {
+    font-size: 6em;
+  }
+
+  .content .social ul li {
+    font-size: 1.1em;
+  }
+
+  .social ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    align-content: center;
+  }
+
+/* MAKE CUBE BIGGGGGGGER
+
+
+
+  }
+ */
+
+
+@media only screen and (max-width: 736px) and (device: iPad) {
+/* CHECK ^^^^ */
     .content {
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
         float: none;
-        
+        padding-top: 1em;
     }
-    
-    .content h1 {
-        font-size: 
+
+    /*.content h1 {
+        font-size:
+    }*/
+
+    .social {
+      text-align: left;
+      width: 50%;
+      margin: 0 auto;
     }
-    
+
+    .social ul li {
+      /*display: inline-block;*/
+    }
+
     .container {
-        top: 40%;
+        top: 45%;
         left: 25%;
+        float: none;
     }
 }
+
+@media only screen and (max-width: 320px) {
+
+    .content {
+      padding-top: 1em;
+    }
+
+    .content .header h1 {
+        font-size: 4em;
+    }
+
+    .container {
+        top: 50%;
+        left: 25%;
+        float: none;
+    }
+
+    .cube {
+        height: 150px;
+        width: 150px;
+    }
+
+    .cube > div {
+        height: 150px;
+        width: 150px;
+        padding: 10px;
+    }
+
+
+    .cube > div:first-child  {
+    -webkit-transform: rotateX(90deg) translateZ(70px);
+    -moz-transform: rotateX(90deg) translateZ(70px);
+    transform: rotateX(90deg) translateZ(70px);
+}
+
+.cube > div:nth-child(2) {
+    -webkit-transform: translateZ(70px);
+    -moz-transform: translateZ(70px);
+    transform: translateZ(70px);
+}
+
+.cube > div:nth-child(3) {
+    -webkit-transform: rotateY(90deg) translateZ(70px);
+    -moz-transform: rotateY(90deg) translateZ(70px);
+    transform: rotateY(90deg) translateZ(70px);
+    text-align: center;
+}
+
+.cube > div:nth-child(4) {
+    -webkit-transform: rotateY(180deg) translateZ(70px);
+    -moz-transform: rotateY(180deg) translateZ(70px);
+    transform: rotateY(180deg) translateZ(70px);
+}
+
+.cube > div:nth-child(5) {
+    -webkit-transform: rotateY(-90deg) translateZ(70px);
+    -moz-transform: rotateY(-90deg) translateZ(70px);
+    transform: rotateY(-90deg) translateZ(70px);
+}
+
+
+.cube > div:nth-child(6) {
+    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(70px);
+    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(70px);
+    transform: rotateX(-90deg) rotate(180deg) translateZ(70px);
+}
+
+    /* NOTE TO SELF : WRITE CODE FOR HORIZONTAL PHONES */
